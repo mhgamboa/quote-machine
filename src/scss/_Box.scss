@@ -9,7 +9,36 @@
     display: flex;
     flex-direction: column;
 
+    .quote {
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 1100ms steps(40, end) forwards, blink 1.3s infinite;
+    }
+
     .quote-author {
         align-self: flex-end;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 1000ms steps(40, start) 1500ms backwards;
+        width: auto;
+        text-align: right;
+    }
+
+    @keyframes typing {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+    @keyframes blink {
+        0%,
+        100% {
+            border-right: 2px solid transparent;
+        }
+        50% {
+            border-right: 2px solid #222;
+        }
     }
 }

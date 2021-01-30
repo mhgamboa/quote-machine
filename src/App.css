@@ -12,9 +12,60 @@
           flex-direction: column;
 }
 
+.quote-box .quote {
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 1100ms steps(40, end) forwards, blink 1.3s infinite;
+          animation: typing 1100ms steps(40, end) forwards, blink 1.3s infinite;
+}
+
 .quote-box .quote-author {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 1000ms steps(40, start) 1500ms backwards;
+          animation: typing 1000ms steps(40, start) 1500ms backwards;
+  width: auto;
+  text-align: right;
+}
+
+@-webkit-keyframes typing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink {
+  0%,
+  100% {
+    border-right: 2px solid transparent;
+  }
+  50% {
+    border-right: 2px solid #222;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-right: 2px solid transparent;
+  }
+  50% {
+    border-right: 2px solid #222;
+  }
 }
 
 * {

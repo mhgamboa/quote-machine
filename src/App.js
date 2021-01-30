@@ -6,17 +6,17 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      quote: '',
-      author: ''
+      quoteNumber: 3
     }
   }
   render() {
     return (
     <div className="App">
       <div className="quote-box">
-        <h1 className="quote">{quotesArray[0].quote}</h1>
-        <p className="quote-author">- {quotesArray[0].author}</p>
-      </div> 
+        <h1 className="quote">{quotesArray[this.state.quoteNumber].quote}</h1>
+        <p className="quote-author">- {quotesArray[this.state.quoteNumber].author}</p>
+      </div>
+      <div className="buttons-container"></div>
     </div>
   );
   }
