@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import quotesArray from './quotesArray.js'
 
-function App() {
-  return (
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      quote: '',
+      author: ''
+    }
+  }
+  render() {
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="quote-box">
+        <h1 className="quote">{quotesArray[0].quote}</h1>
+        <p className="quote-author">- {quotesArray[0].author}</p>
+      </div> 
     </div>
   );
+  }
 }
 
 export default App;

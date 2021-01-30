@@ -1,0 +1,15 @@
+.quote-box {
+    //Design
+    background-color: white;
+    border: solid gray 1px;
+    border-radius: 10px;
+    padding: 10px;
+
+    //Layout
+    display: flex;
+    flex-direction: column;
+
+    .quote-author {
+        align-self: flex-end;
+    }
+}
