@@ -1,4 +1,4 @@
-.quote-box {
+#quote-box {
   background-color: white;
   border: solid gray 1px;
   border-radius: 10px;
@@ -12,14 +12,14 @@
           flex-direction: column;
 }
 
-.quote-box .quote {
+#quote-box #text {
   white-space: nowrap;
   overflow: hidden;
   -webkit-animation: typing 1100ms steps(40, end) forwards, blink 1.3s infinite;
           animation: typing 1100ms steps(40, end) forwards, blink 1.3s infinite;
 }
 
-.quote-box .quote-author {
+#quote-box #author {
   -ms-flex-item-align: end;
       align-self: flex-end;
   white-space: nowrap;

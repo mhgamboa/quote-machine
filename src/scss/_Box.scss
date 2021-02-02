@@ -1,4 +1,4 @@
-.quote-box {
+#quote-box {
     //Design
     background-color: white;
     border: solid gray 1px;
@@ -9,18 +9,21 @@
     display: flex;
     flex-direction: column;
 
-    .quote {
+    #text {
         white-space: nowrap;
         overflow: hidden;
         animation: typing 1100ms steps(40, end) forwards, blink 1.3s infinite;
     }
 
-    .quote-author {
+    #removeText {
+        animation: eraseTyping 1100ms steps(40, end) forwards;
+    }
+
+    #author {
         align-self: flex-end;
         white-space: nowrap;
         overflow: hidden;
         animation: typing 1000ms steps(40, start) 1500ms backwards;
-        width: auto;
         text-align: right;
     }
 
@@ -32,6 +35,16 @@
             width: 100%;
         }
     }
+
+    @keyframes eraseTyping {
+        0% {
+            width: 100%;
+        }
+        100% {
+            width: 0%;
+        }
+    }
+
     @keyframes blink {
         0%,
         100% {

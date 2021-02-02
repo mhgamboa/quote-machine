@@ -3,6 +3,7 @@ const QuotesArray = [
     {quote: "Git 'R Done!", author: "Larry the Cable Guy"},
     {quote: "No.", author: "My Wife"},
     {quote: "Do you Hear the People Sing?", author: "Jean Valjean"},
+    {quote: "Live Long and Prosper 🖖", author: "Spock"},
     {quote: "", author: ""}
 ]
 
