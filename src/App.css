@@ -10,62 +10,55 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90vw;
+  height: 40vh;
+  min-height: 180px;
+  max-width: 750px;
 }
 
 #quote-box #text {
-  white-space: nowrap;
-  overflow: hidden;
-  -webkit-animation: typing 1100ms steps(40, end) forwards, blink 1.3s infinite;
-          animation: typing 1100ms steps(40, end) forwards, blink 1.3s infinite;
+  -webkit-transition: 1500ms;
+  transition: 1500ms;
 }
 
 #quote-box #author {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  white-space: nowrap;
-  overflow: hidden;
-  -webkit-animation: typing 1000ms steps(40, start) 1500ms backwards;
-          animation: typing 1000ms steps(40, start) 1500ms backwards;
-  width: auto;
   text-align: right;
+  margin-top: 0px;
+  -webkit-transition: 1500ms;
+  transition: 1500ms;
+  font-size: 1.2em;
+  font-weight: 800;
 }
 
-@-webkit-keyframes typing {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
+#quote-box .buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-@keyframes typing {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
+#quote-box .buttons-container button {
+  padding: 8px;
+  border: solid white 3px;
+  border-radius: 10px;
+  color: white;
+  -webkit-transition: 1500ms;
+  transition: 1500ms;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
-@-webkit-keyframes blink {
-  0%,
-  100% {
-    border-right: 2px solid transparent;
-  }
-  50% {
-    border-right: 2px solid #222;
-  }
+#quote-box .buttons-container button:hover {
+  cursor: pointer;
 }
 
-@keyframes blink {
-  0%,
-  100% {
-    border-right: 2px solid transparent;
-  }
-  50% {
-    border-right: 2px solid #222;
-  }
+#quote-box > * {
+  margin: 10px;
 }
 
 * {
@@ -93,5 +86,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 1500ms;
+  transition: 1500ms;
 }
 /*# sourceMappingURL=App.css.map */

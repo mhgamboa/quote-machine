@@ -1,5 +1,5 @@
 #quote-box {
-    //Design
+    //color & border
     background-color: white;
     border: solid gray 1px;
     border-radius: 10px;
@@ -8,50 +8,43 @@
     //Layout
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    width: 90vw;
+    height: 40vh;
+    min-height: 180px;
+    max-width: 750px;
 
     #text {
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 1100ms steps(40, end) forwards, blink 1.3s infinite;
-    }
-
-    #removeText {
-        animation: eraseTyping 1100ms steps(40, end) forwards;
+        transition: 1500ms;
     }
 
     #author {
-        align-self: flex-end;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 1000ms steps(40, start) 1500ms backwards;
         text-align: right;
+        margin-top: 0px;
+        transition: 1500ms;
+        font-size: 1.2em;
+        font-weight: 800;
     }
 
-    @keyframes typing {
-        0% {
-            width: 0%;
-        }
-        100% {
-            width: 100%;
+    .buttons-container {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            padding: 8px;
+            border: solid white 3px;
+            border-radius: 10px;
+            color: white;
+            transition: 1500ms;
+            font-size: 1.2em;
+            font-weight: 700;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
-    @keyframes eraseTyping {
-        0% {
-            width: 100%;
-        }
-        100% {
-            width: 0%;
-        }
-    }
-
-    @keyframes blink {
-        0%,
-        100% {
-            border-right: 2px solid transparent;
-        }
-        50% {
-            border-right: 2px solid #222;
-        }
+    > * {
+        margin: 10px;
     }
 }
