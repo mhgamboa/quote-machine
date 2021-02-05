@@ -1,3 +1,5 @@
+$transition-time: 800ms;
+
 #quote-box {
     //color & border
     background-color: white;
@@ -11,18 +13,18 @@
     justify-content: space-between;
     width: 90vw;
     height: 40vh;
-    min-height: 180px;
+    min-height: 280px;
     max-width: 750px;
 
     #text {
-        transition: 1500ms;
+        transition: $transition-time;
     }
 
     #author {
         text-align: right;
         margin-top: 0px;
-        transition: 1500ms;
-        font-size: 1.2em;
+        transition: $transition-time;
+        font-size: 1.5em;
         font-weight: 800;
     }
 
@@ -35,7 +37,7 @@
             border: solid white 3px;
             border-radius: 10px;
             color: white;
-            transition: 1500ms;
+            transition: $transition-time;
             font-size: 1.2em;
             font-weight: 700;
             &:hover {

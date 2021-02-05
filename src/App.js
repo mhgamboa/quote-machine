@@ -27,8 +27,10 @@ class App extends Component {
       color: newColor
     })
   }
+  componentDidMount() {
+    setTimeout(this.newQuote,1)
+  }
   render() {
-
     return (
     <div className="App" style={{backgroundColor: this.state.color}}>
       <div id="quote-box">

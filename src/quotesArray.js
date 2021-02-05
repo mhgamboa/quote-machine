@@ -8,7 +8,7 @@ const QuotesArray = [
     {quote: "In the end, it's not the years in your life that count. It's the life in your years.", author: "Abraham Lincoln"},
     {quote: "Do not let making a living prevent you from making a life.", author: "John Wooden"},
     {quote: "The way to get started is to quit talking and begin doing.", author: "Walt Disney"},
-    {quote: '"Hello World!"', author: "Anyone who's every coded"},
+    {quote: '"Hello World!"', author: "Anyone who's ever coded"},
     {quote: "", author: ""},
 ]
 

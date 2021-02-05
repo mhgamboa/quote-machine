@@ -15,21 +15,21 @@
           justify-content: space-between;
   width: 90vw;
   height: 40vh;
-  min-height: 180px;
+  min-height: 280px;
   max-width: 750px;
 }
 
 #quote-box #text {
-  -webkit-transition: 1500ms;
-  transition: 1500ms;
+  -webkit-transition: 800ms;
+  transition: 800ms;
 }
 
 #quote-box #author {
   text-align: right;
   margin-top: 0px;
-  -webkit-transition: 1500ms;
-  transition: 1500ms;
-  font-size: 1.2em;
+  -webkit-transition: 800ms;
+  transition: 800ms;
+  font-size: 1.5em;
   font-weight: 800;
 }
 
@@ -47,8 +47,8 @@
   border: solid white 3px;
   border-radius: 10px;
   color: white;
-  -webkit-transition: 1500ms;
-  transition: 1500ms;
+  -webkit-transition: 800ms;
+  transition: 800ms;
   font-size: 1.2em;
   font-weight: 700;
 }
@@ -86,7 +86,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 1500ms;
-  transition: 1500ms;
+  -webkit-transition: 500ms;
+  transition: 500ms;
 }
 /*# sourceMappingURL=App.css.map */
