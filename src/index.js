@@ -3,11 +3,35 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+/* REDUX STUFF */
+const COLOR = 'COLOR'
+
+const colorAction = () => ({
+  type: COLOR
+})
+
+const reducer = (state, action) => {
+  switch(action.type) {
+    case COLOR:
+      return state;
+    default:
+      return state;
+  }
+}
+
+const store = createStore(reducer);
+
+store.dispatch(colorAction())
+
+/* END REDUX */
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
