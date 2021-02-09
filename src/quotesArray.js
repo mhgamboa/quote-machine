@@ -9,7 +9,7 @@ const QuotesArray = [
     {quote: "Do not let making a living prevent you from making a life.", author: "John Wooden"},
     {quote: "The way to get started is to quit talking and begin doing.", author: "Walt Disney"},
     {quote: '"Hello World!"', author: "Anyone who's ever coded"},
-    {quote: "", author: ""},
+    // {quote: "", author: ""},
 ]
 
 export default QuotesArray;
