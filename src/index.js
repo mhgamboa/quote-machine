@@ -1,14 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { createStore, bindActionCreators } from 'redux';
+import { createStore, bindActionCreators, combineReducers } from 'redux';
 import { Provider, connect } from 'react-redux';
 
 import './App.css';
 
-import quotesArray from './quotesArray.js';
-
 //Functions for Redux
+const quotesArray = [
+    {quote: "Do or do not, there is no try.", author: 'Yoda'},
+    {quote: "Git 'R Done!", author: "Larry the Cable Guy"},
+    {quote: "No.", author: "My Wife"},
+    {quote: "Live Long and Prosper 🖖", author: "Spock"},
+    {quote: "I have a dream...", author: "Martin Luther King Jr."},
+    {quote: "Tell me and I forget. Teach me and I remember. Involve me and I learn.", author: "Benjamin Franklin"},
+    {quote: "In the end, it's not the years in your life that count. It's the life in your years.", author: "Abraham Lincoln"},
+    {quote: "Do not let making a living prevent you from making a life.", author: "John Wooden"},
+    {quote: "The way to get started is to quit talking and begin doing.", author: "Walt Disney"},
+    {quote: '"Hello World!"', author: "Anyone who's ever coded"},
+    {quote: "", author: ""},
+]
+
 let createNewQuoteNumber = () => Math.floor(Math.random() * (quotesArray.length - 1));
 let createNewColor = () => {
   let hexArray = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
@@ -26,7 +38,7 @@ const NEWQUOTE = 'NEWQUOTE';
 
 let initialState = {
   color: 'orange',
-  quoteNumber: 1
+  quoteNumber: 0
 }
 
 const reducer = (state = initialState, action) => {
@@ -41,18 +53,22 @@ const reducer = (state = initialState, action) => {
         return state;
   }
 }
+
+const rootReducer = combineReducers({reducer: reducer})
+
 let NEWQUOTEAction = () => ({
   type: NEWQUOTE,
   color: createNewColor(),
   quoteNumber: createNewQuoteNumber()
 })
 
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 /* END REDUX */
 
 /* START REACT */
 class App extends React.Component {
   render() {
+    console.log(this.props)
     return (
     <div className="App" style={{backgroundColor: this.props.color}}>
       <div id="quote-box">
@@ -71,13 +87,11 @@ class App extends React.Component {
 /* END REACT */
 
 /* CONNECT REDUX TO REACT */
-let mapDispatchToProps = (dispatch) => ({
-  createNewQuote: () => dispatch(NEWQUOTEAction())
-})
+let mapDispatchToProps = (dispatch) => bindActionCreators({createNewQuote: NEWQUOTEAction}, dispatch);
 
 let mapStateToProps = (state) => ({
-  color: state.color,
-  quoteNumber: state.quoteNumber
+  color: state.reducer.color,
+  quoteNumber: state.reducer.quoteNumber
 })
 
 let CApp = connect(mapStateToProps, mapDispatchToProps)(App)
